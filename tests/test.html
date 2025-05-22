@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Project Tests</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Optional: for consistent styling of rendered posts -->
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        #test-results { margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; }
+        .test-case { margin-bottom: 5px; }
+        .pass { color: green; }
+        .fail { color: red; font-weight: bold; }
+        main { border: 1px dashed #ccc; padding: 10px; margin-top: 10px; min-height: 100px; }
+    </style>
+</head>
+<body>
+    <h1>Blog Project Tests</h1>
+    <div id="test-results">
+        <h2>Test Results</h2>
+        <!-- Test results will be appended here -->
+    </div>
+
+    <!-- Main element for renderPosts to target -->
+    <main></main>
+
+    <!-- Scripts -->
+    <!-- Notion SDK -->
+    <script src="https://unpkg.com/@notionhq/client/build/index.js"></script>
+    <!-- Main application script (relative path from tests directory) -->
+    <script src="../script.js"></script>
+    <!-- Test script -->
+    <script src="test_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+/* General Body and Layout */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for the page */
+    color: #333; /* Default text color */
+    line-height: 1.6;
+}
+
+main {
+    max-width: 800px; /* Max width for the content area */
+    margin: 0 auto; /* Center the content area */
+    padding: 20px;
+    background-color: #fff; /* White background for the main content block */
+    box-shadow: 0 0 10px rgba(0,0,0,0.05); /* Subtle shadow for the main content area */
+}
+
+/* Article Styling */
+article {
+    margin-bottom: 40px; /* Space between posts */
+    padding: 20px;
+    border: 1px solid #eee; /* Light border for each article */
+    border-radius: 5px; /* Slightly rounded corners */
+    background-color: #fff; /* Ensure articles are white if main has a different bg */
+}
+
+/* Post Title (h2) */
+article h2 {
+    font-size: 1.8em; /* Larger font size for post titles */
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 10px;
+    color: #2c3e50; /* Darker color for titles */
+}
+
+/* Post Date (p.date) */
+article p.date {
+    font-size: 0.9em;
+    color: #7f8c8d; /* Lighter color for the date */
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* Post Content (div.post-content and its p tags) */
+.post-content p {
+    margin-bottom: 1em; /* Space between paragraphs within a post */
+    color: #34495e; /* Slightly softer text color for content */
+}
+
+.post-content p:last-child {
+    margin-bottom: 0; /* No margin for the last paragraph in a post */
+}
+
+/* Styling for links (if any are added later) */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Error and Informational Messages */
+/* (e.g., "No published posts found." or API errors) */
+main > p { /* Targeting direct p children of main for these messages */
+    text-align: center;
+    font-size: 1.1em;
+    color: #e74c3c; /* Error color (reddish) */
+    padding: 20px;
+}
+
+main > p:first-child[style*="color:red;"] { /* Specific for the JS-inserted error */
+    background-color: #fdd;
+    border: 1px solid #e74c3c;
+    border-radius: 5px;
+}
+
+/* Style for "No published posts found." if it's the only content */
+main > p:only-child {
+    color: #7f8c8d; /* More neutral color for "no posts" */
+    font-style: italic;
+}
